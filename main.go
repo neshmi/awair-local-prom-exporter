@@ -186,4 +186,5 @@ func (app *App) getAwairData(awairAddress string) {
 	app.Co2Gauge.WithLabelValues(awairAddress).Set(float64(awairStats.Co2))
 	app.VOCGauge.WithLabelValues(awairAddress).Set(float64(awairStats.Voc))
 	app.PM25Gauge.WithLabelValues(awairAddress).Set(float64(awairStats.Pm25))
+	app.ScoreGauge.WithLabelValues(awairAddress).Set(float64(awairStats.Score))
 }
